@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* font-size: 100%; */
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 10px;
+  margin: 40px auto;
+  max-width: 600px;
+  width: 80%;
+
+  color: #2d3436;
+}
+
+.caption {
+  margin-bottom: 20px;
+  font-size: 4.7em;
+  margin: 20% auto 10%;
+  text-align: center;
+  padding-left: 20px;
+  text-transform: uppercase;
+  font-weight: 100
+}
+
+h3,
+p {
+  margin-bottom: 10px;
+  font-size: 1.8em;
+}
+
+
+.wrapper {
+  border-radius: 0px 0px 10px 10px;
+
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 2.5em;
+}
+
+a,
+span {
+  color: #6c5ce7;
+  text-decoration: none;
+  transition: all .75s ease;
+
+}
+
+a:hover {
+  color: #412dda;
+  font-size: 17px;
+}
+
+
+.photo {
+  color: white;
+  height: 300px;
+  padding: 20px;
+  border-radius: 10px 10px 0px 0px;
+  background: rgb(108, 92, 231);
+  background: linear-gradient(90deg, rgba(108, 92, 231, 1) 35%, rgba(86, 65, 241, 1) 100%);
+}
+
+
+
+.shadow {
+  -webkit-box-shadow: 4px 8px 26px -6px rgba(99, 94, 99, 0.68);
+  -moz-box-shadow: 4px 8px 26px -6px rgba(99, 94, 99, 0.68);
+  box-shadow: 4px 8px 26px -6px rgba(99, 94, 99, 0.68);
+
+}
+
+.desc {
+  padding: 20px;
+  line-height: 27px;
+}
+
+
+.displayPhoto img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 20px;
+  float: right;
+  border: 2px solid rgba(255, 255, 255, 0.884);
+}
+
+
+/**
+ * Tooltip Styles
+ */
+
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 160px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #000;
+  background-color: hsla(0, 0%, 20%, 0.9);
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
