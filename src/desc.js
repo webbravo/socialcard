@@ -4,7 +4,7 @@ const Desc = () => {
   return (
     <div className="desc">
       <h3 className="card-title">
-        Web developer{" "}
+       Business / Developer{" "}
         <span role="img" aria-label="emoji">
           🤓
         </span>
